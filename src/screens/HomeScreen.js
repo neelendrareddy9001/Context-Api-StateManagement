@@ -1,13 +1,15 @@
 import React from 'react'
 import products from '../data'
 import './HomeScreen.css'
+import ProductCard from '../Components/ProductCard'
+
 
 
 const HomeScreen = () => {
   return (
-    <div>
+    <div className='products_wrapper'>
         {products.map((product) => (
-            product.name
+            <ProductCard key={product.id} product={product} />
         ))}
     </div>
   )
